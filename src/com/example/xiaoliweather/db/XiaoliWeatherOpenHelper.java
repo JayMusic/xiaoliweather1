@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class XiaoliWeatherOpenHelper extends SQLiteOpenHelper {
-    public static final String CREATE_PROVINCE="creat table Province("+"id integer primary key autoincrement,"+"province_name text,"+"province_code text)";
-	public static final String CREATE_CITY="creat table City("+"id integer primary key autoincrement,"+"City_name text,"+"City_code text)";
-	public static final String CREATE_COUNTY="creat table County("+"id integer primary key autoincrement,"+"County_name text,"+"County_code text)";
+    public static final String CREATE_PROVINCE="create table Province("+"id integer primary key autoincrement,"+"province_name text,"+"province_code text)";
+	public static final String CREATE_CITY="create table City("+"id integer primary key autoincrement,"+"city_name text,"+"city_code text,"+"province_id integer)";
+	public static final String CREATE_COUNTY="create table County("+"id integer primary key autoincrement,"+"county_name text,"+"county_code text,"+"city_id integer)";
 	public XiaoliWeatherOpenHelper(Context context, String name,
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
